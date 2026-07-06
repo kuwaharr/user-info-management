@@ -1,0 +1,31 @@
+{
+  "name": "user-info-management",
+  "version": "1.0.0",
+  "description": "架空のユーザーが個人情報を入力し、管理者画面で登録情報を一覧表示できるシステムです。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuwaharr/user-info-management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kuwaharr/user-info-management/issues"
+  },
+  "homepage": "https://github.com/kuwaharr/user-info-management#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
