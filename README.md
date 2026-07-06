@@ -47,3 +47,30 @@
 - [ ] ユーザー入力フォームを作成
 - [ ] データ保存処理を作成
 - [ ] 管理者一覧画面を作成
+
+## 使用技術
+
+| 分類 | 技術 |
+| --- | --- |
+| フロントエンド | HTML / CSS / JavaScript |
+| バックエンド | Node.js / Express / TypeScript |
+| データベース | SQLite |
+| バージョン管理 | Git / GitHub |
+
+## ディレクトリ構成
+
+```text
+user-info-management/
+    README.md
+    package.json
+    tsconfig.json
+    database.db
+    src/
+        server.cs
+        db/
+            database.ts
+    public/
+        index.html
+        admin.html
+        style.css
+        script.cs
