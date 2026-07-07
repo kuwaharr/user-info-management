@@ -4,7 +4,8 @@
   "description": "架空のユーザーが個人情報を入力し、管理者画面で登録情報を一覧表示できるシステムです。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn src/server.ts"
   },
   "repository": {
     "type": "git",
