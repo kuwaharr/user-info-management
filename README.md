@@ -1,63 +1,63 @@
-# 架空ユーザー情報管理システム
+# User Informaiton Management System
 
-## 概要
+## Overview
 
-架空のユーザーが個人情報を入力し、管理者画面で登録情報を一覧表示できるシステムです。
+This is a learning project for building a system where fictional users enter personal information, and an adminstrator can view the submitted information in a list.
 
-プログラミング学習を目的として、小規模な機能から作成し、徐々に機能を追加していきます。
+The purpose of this project is not real-world operation, but learning the basics of form input, data storage, and list display.
 
-## 目的
+## Purpose
 
-- フォーム入力の実装を学ぶ
-- 入力データの保存を学ぶ
-- 管理者画面での一覧表示を学ぶ
-- 小規模なWebアプリケーションの構成を理解する
+- Learn how to implement form input
+- Learn how to store submitted data
+- Learn how to display data in an admin page
+- Understand the structure of a small web application
 
-## 入力項目
+## Input Fields
 
-| 項目 | 内容 |
+| Field | Description |
 |---|---|
-| 氏名 | ユーザーの名前 |
-| 年齢 | ユーザーの年齢 |
-| メールアドレス | ユーザーのメールアドレス |
-| 電話番号 | ユーザーの電話番号 |
-| 住所 | ユーザーの住所 |
-| 職業 | ユーザーの職業 |
-| 備考 | その他の情報 |
+| Name | User's name |
+| Age | User's age |
+| Email | User's email address |
+| Phone Number | User's phone number |
+| Address | User's address |
+| Job | User's job |
+| Note | Additional informaiton |
 
-## 画面構成
+## Page Structure
 
-### ユーザー画面
+### User Page
 
-- 個人情報を入力するフォーム
-- 送信ボタン
+- Form for entering personal information
+- Submit button
 
-### 管理者画面
+### Admin Page
 
-- 登録されたユーザー情報の一覧表示
+- List of submitted user information
 
-## 最初の完成目標
+## First Goal
 
-ユーザーがフォームから情報を送信し、管理者画面でその情報を一覧表示できる状態にする。
+Allow users to submit information throught a form and allow the administrator to view the submitted information
 
-## 実装予定
+## Implementation Plan
 
-- [x] READMEを作成
-- [ ] 入力項目を決める
-- [ ] ユーザー入力フォームを作成
-- [ ] データ保存処理を作成
-- [ ] 管理者一覧画面を作成
+- [x] Create README
+- [ ] Decide input fields
+- [ ] Create user input form
+- [ ] Create data saving process
+- [ ] Create admin list page
 
-## 使用技術
+## Technologies Used
 
-| 分類 | 技術 |
+| Category | Technology |
 | --- | --- |
-| フロントエンド | HTML / CSS / JavaScript |
-| バックエンド | Node.js / Express / TypeScript |
-| データベース | SQLite |
-| バージョン管理 | Git / GitHub |
+| Frontend | HTML / CSS / JavaScript |
+| Backend | Node.js / Express / TypeScript |
+| Database | SQLite |
+| Version Control | Git / GitHub |
 
-## ディレクトリ構成
+## Directory Structure
 
 ```text
 user-info-management/
@@ -66,11 +66,11 @@ user-info-management/
     tsconfig.json
     database.db
     src/
-        server.cs
+        server.ts
         db/
             database.ts
     public/
         index.html
         admin.html
         style.css
-        script.cs
+        script.js
