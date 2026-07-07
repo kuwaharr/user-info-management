@@ -63,6 +63,7 @@ Allow users to submit information through a form and allow the administrator to 
 user-info-management/
     README.md
     package.json
+    package-lock.json
     tsconfig.json
     database.db
     src/
@@ -74,3 +75,4 @@ user-info-management/
         admin.html
         style.css
         script.js
+        admin.js
