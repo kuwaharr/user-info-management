@@ -1,8 +1,8 @@
-# User Informaiton Management System
+# User Information Management System
 
 ## Overview
 
-This is a learning project for building a system where fictional users enter personal information, and an adminstrator can view the submitted information in a list.
+This is a learning project for building a system where fictional users enter personal information, and an administrator can view the submitted information in a list.
 
 The purpose of this project is not real-world operation, but learning the basics of form input, data storage, and list display.
 
@@ -23,7 +23,7 @@ The purpose of this project is not real-world operation, but learning the basics
 | Phone Number | User's phone number |
 | Address | User's address |
 | Job | User's job |
-| Note | Additional informaiton |
+| Note | Additional information |
 
 ## Page Structure
 
@@ -38,7 +38,7 @@ The purpose of this project is not real-world operation, but learning the basics
 
 ## First Goal
 
-Allow users to submit information throught a form and allow the administrator to view the submitted information
+Allow users to submit information through a form and allow the administrator to view the submitted information
 
 ## Implementation Plan
 
