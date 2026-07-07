@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import { db } from "./db/database";
 
 const app = express();
 const PORT = 3000;
@@ -15,9 +16,6 @@ type User = {
     note: string;
 };
 
-const users: User[] = [];
-let nextId = 1;
-
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
 
@@ -26,30 +24,46 @@ app.get("/api/health", (req, res) => {
 });
 
 app.post("/api/users", (req, res) => {
-    const user: User = {
-        id: nextId,
-        name: req.body.name,
-        age: req.body.age,
-        email: req.body.email,
-        phone: req.body.phone,
-        address: req.body.address,
-        job: req.body.job,
-        note: req.body.note,
-    };
+    const { name, age, email, phone, address, job, note } = req.body;
 
-    users.push(user);
-    nextId++;
+    db.run(
+        `
+        INSERT INTO users (name, age, email, phone, address, job, note)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        `,
+        [name, age, email, phone, address, job, note],
+        function (err) {
+            if (err) {
+                res.status(500).json({ message: "Failed to save user data" });
+                return;
+            }
 
-    console.log(req.body);
-
-    res.json({
-        message: "User data saved",
-        user: user,
-    });
+            res.json({
+                message: "User data saved",
+                user: {
+                    id: this.lastID,
+                    name,
+                    age,
+                    email,
+                    phone,
+                    address,
+                    job,
+                    note,
+                },
+            });
+        }
+    );
 });
 
 app.get("/api/users", (req, res) => {
-    res.json(users);
+    db.all("SELECT * FROM users", (err, rows) => {
+        if (err) {
+            res.status(500).json({ message: "Failed to fetch users" });
+            return;
+        }
+
+        res.json(rows);
+    });
 });
 
 app.listen(PORT, () => {
