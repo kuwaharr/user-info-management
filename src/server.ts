@@ -26,6 +26,13 @@ app.get("/api/health", (req, res) => {
 app.post("/api/users", (req, res) => {
     const { name, age, email, phone, address, job, note } = req.body;
 
+    if (!name || !age || !email || !phone || !address || !job) {
+        res.status(400).json({
+            message: "Please fill in all required fields",
+        });
+        return;
+    }
+
     db.run(
         `
         INSERT INTO users (name, age, email, phone, address, job, note)
