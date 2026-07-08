@@ -73,6 +73,21 @@ app.get("/api/users", (req, res) => {
     });
 });
 
+app.delete("/api/users/:id", (req, res) => {
+    const id = req.params.id;
+
+    db.run("DELETE FROM users WHERE id = ?", [id], function (err) {
+        if (err) {
+            res.status(500).json({ message: "Failed to delete user" });
+            return;
+        }
+
+        res.json({
+            message: "User deleted",
+        });
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });

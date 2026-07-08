@@ -18,6 +18,9 @@ async function loadUsers() {
             <td>${user.address}</td>
             <td>${user.job}</td>
             <td>${user.note}</td>
+            <td>
+                <button onclick="deleteUser(${user.id})">Delete</button>
+            </td>
         `;
 
         userList.appendChild(row);
@@ -25,3 +28,15 @@ async function loadUsers() {
 }
 
 loadUsers();
+
+async function deleteUser(id) {
+    const response = await fetch(`/api/users/${id}`, {
+        method: "DELETE",
+    });
+
+    const result = await response.json();
+
+    alert(result.message);
+
+    loadUsers();
+}
