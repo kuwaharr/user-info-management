@@ -30,6 +30,12 @@ async function loadUsers() {
 loadUsers();
 
 async function deleteUser(id) {
+    const confirmed = confirm("Are you sure you want to delete this user?");
+
+    if (!confirmed) {
+        return;
+    }
+
     const response = await fetch(`/api/users/${id}`, {
         method: "DELETE",
     });
