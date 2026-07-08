@@ -6,6 +6,15 @@ async function loadUsers() {
 
     userList.innerHTML = "";
 
+    if (users.length === 0) {
+        userList.innerHTML = `
+            <tr>
+                <td colspan="9">No users found.</td>
+            </tr>
+        `;
+        return;
+    }
+
     users.forEach((user) => {
         const row = document.createElement("tr");
 
