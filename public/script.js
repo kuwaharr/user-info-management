@@ -1,5 +1,7 @@
 const form = document.querySelector("form");
 
+const message = document.getElementById("message");
+
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -25,5 +27,9 @@ form.addEventListener("submit", async (event) => {
 
     const result = await response.json();
 
-    console.log(result);
+    message.textContent = result.message;
+
+    if(response.ok) {
+        form.reset();
+    }
 })
