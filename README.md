@@ -43,10 +43,10 @@ Allow users to submit information through a form and allow the administrator to 
 ## Implementation Plan
 
 - [x] Create README
-- [ ] Decide input fields
-- [ ] Create user input form
-- [ ] Create data saving process
-- [ ] Create admin list page
+- [x] Decide input fields
+- [x] Create user input form
+- [x] Create data saving process
+- [x] Create admin list page
 
 ## Technologies Used
 
